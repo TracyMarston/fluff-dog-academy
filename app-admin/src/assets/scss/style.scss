@@ -1,0 +1,513 @@
+@use 'base';
+@use 'normalize';
+@use 'buttons';
+@use 'navigation';
+@use 'edit';
+@use 'ico';
+@use 'bootstrap';
+@use 'blogTile';
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+   * {
+    box-sizing: border-box;
+  }
+html {
+  color: #222;
+}
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+textarea {
+  resize: vertical;
+}
+
+img {
+  width: 100%;
+}
+
+body {
+  font-size: 18px;
+  line-height: calc(2px + 2ex + 2px);
+}
+
+/* ==========================================================================
+     Author: Tracy Marston / 2022
+     ========================================================================== */
+h1,
+h2,
+h3,
+h4 {
+  color: base.$color-primary;
+  font-family: base.$font-name;
+  line-height: calc(2px + 2ex + 2px);
+  margin: 0 0 calc(2px + .5ex + 2px);
+}
+
+h2 {
+  font-size: 2.5em;
+}
+
+h3 {
+  font-size: 1.5em
+}
+
+p {
+  margin: 0 0 1em;
+}
+
+p,
+ul,
+ol,
+.topFooterNav {
+  font-family:  base.$font-name-secondary;
+  line-height: calc(2px + 2ex + 2px);
+}
+
+header {
+  background: base.$color-white;
+}
+
+
+.blogItemDetail{
+  padding: 1.5em;
+  h2{margin: 0 0 .5em;}
+  .mainBlogContent{padding: 1em;}
+}
+.authorArea{
+  padding: 1em .5em;
+  border-top: 2px solid base.$color-primary;
+  border-bottom:  2px solid base.$color-primary;
+  margin: 0 0 1.5em;
+ 
+  .photo{
+    border: 1px solid base.$color-dkgray;
+   display: inline-block;
+  
+   margin: 0 2% 2% 0;
+   vertical-align: middle;
+    max-width: 65px;
+    overflow: hidden;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px  ;
+  }
+  .author{
+    p{font-weight: 800;
+      text-transform: uppercase;
+      font-size: 1.4rem; 
+       margin: 0; color: base.$color-dkgray; color: base.$color-tertiary;}
+       //display: inline-block; 
+      //vertical-align: middle;
+       //width: 59%; 
+   }
+    .date{ 
+     p{margin:0;}
+      //vertical-align: middle;
+      //margin-top: 24px;
+      //text-align: right; 
+      //display: inline-block; 
+     // width: 32%; 
+     margin-bottom: 0;
+      font-size: 1rem; 
+      text-transform:uppercase; 
+      color: base.$color-dkgray;}
+
+
+}
+
+
+
+
+.feature-area {
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+  background-size: cover !important;
+  background: url('../images/template/gallery/feature.jpg') center center no-repeat;
+  width: 100%;
+  max-height: 500px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.4);
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+  }
+
+  .textarea {
+
+    max-width: 800px;
+    margin: 0 auto;
+    color: base.$color-white;
+    padding: 5em 0;
+    text-align: center;
+
+    position: relative;
+    z-index: 20;
+
+    h2 {
+      color: base.$color-white
+    }
+
+
+    p {
+      font-size: 1.5em;
+    }
+  }
+}
+
+.pageIntro{
+  position: relative;
+
+  .photo{
+  
+    background: url('../images/header/header-trainer.jpg') top center no-repeat;
+    background-size:cover;
+    max-height: 100px;
+    overflow: hidden;
+
+  }
+  .content{
+    padding: 1.5em;
+    z-index: 3;
+    position: relative;
+
+  }
+  
+}
+
+
+
+//HOME PAGE SERVICES
+.main-content-area {
+ 
+  margin: 0 auto;
+  
+  form{margin: 0 0 2em;}
+  label, input, button{font-family: base.$font-name-secondary;}
+}
+
+.s-item {display: flex;
+ 
+  padding: 3em 1em;
+  vertical-align: top;
+  display: inline-block;
+  width: 30%;
+  margin: 0 1.5%;
+  text-align: center;
+  color: base.$color-primary;
+  .info{min-height: 125px;}
+  
+}
+
+.manageServices{
+  .item{
+    background: base.$color-white;
+    z-index: 2;
+    position: relative;
+    &:hover{cursor: pointer; background: base.$color-ltgray;}
+    .icon{width: 25%; margin: 0 auto 1.5em;}
+    h3{margin: 0;}
+    border: 2px solid base.$color-primary;
+    padding: 1.5em;
+    margin: 0 0 1.5em;
+    -webkit-border-radius: 20px;
+      -moz-border-radius: 20px;
+      border-radius: 20px;
+      overflow:hidden;
+      transform: scale(1); // stacking context
+
+  }
+}
+
+/** BLOG **/
+.blogArea{
+  .sidebar{display: none;}
+  .blogItem{
+    h3{margin: 0 0 .15em;}
+    h4{color: base.$color-tertiary;}
+    border-bottom: 1px solid base.$color-gray;
+    padding: 1.5em 0;
+    margin: 0 1.5em 1.5em;
+
+    &:last-child{
+      border-bottom: none;
+    }
+  }
+}
+
+/** TRAINER **/
+.trainer-area {
+  max-width: 1025px;
+  padding: 1.5em;
+  margin: 0 auto;
+  
+
+
+    .photo {
+      width: 240px;
+    margin: 0 0 1em;
+    vertical-align: top;
+    img{-webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;}
+  }
+
+  .content {
+    
+    border-bottom: 1px solid base.$color-gray;
+    h3{margin: 0;}
+    h4{color: base.$color-tertiary;}
+    .certification{margin: 0; font-style:italic;}
+  }
+}
+
+.trainer-area:last-child, .trainer-area .content:last-child {
+  border: none;
+}
+
+@media all and (min-width: 700px) {
+  h2 {font-size: 3em;
+  }
+  
+  h3 {
+    font-size: 2em
+  }
+
+
+.pageIntro{
+  overflow: hidden;
+
+  margin: 0 0 3em;
+  .photo{
+    width: 140%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+   
+    max-height: none;
+ 
+   }
+   .content{
+    max-width: 1150px;
+    margin: 0 auto;
+
+     h2, p{color: base.$color-white;text-shadow: 0px 0px 4px rgba(0,0,0,0.38);
+     }
+     padding: 3em 3em;
+     z-index: 3;
+     position: relative;
+ 
+   }
+  .overlay{
+    background-color: rgba(0, 0, 0, 0.4);
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+  }
+}
+
+
+.authorArea{
+  
+ 
+  .photo{
+    display: inline-block;
+   margin: 0 2% 0% 0;
+   vertical-align: middle;
+    max-width: 65px;
+    overflow: hidden;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px  ;
+  }
+  .author{
+   
+       display: inline-block; 
+      vertical-align: middle;
+       width: 55%; 
+   }
+    .date{ 
+    
+      //vertical-align: middle;
+      margin-top: 24px;
+      text-align: right; 
+      display: inline-block; 
+     width: 32%; 
+  
+    }
+
+}
+
+
+.trainer-area {
+  max-width: 1025px;
+  padding: 1.5em;
+  margin: 0 auto 3em;
+  border-bottom: 1px solid base.$color-gray;
+
+
+    .photo {
+    display: inline-block;
+   width: 25%;
+    padding: 0 1em 1em 0;
+   
+  }
+
+  .content {
+    
+    border-bottom: none;
+    h3{margin: 0;}
+    h4{color: base.$color-tertiary;}
+    padding: 0 0 0 1em;
+    width: 75%;
+    display: inline-block;
+   vertical-align: top;
+  }
+}
+
+.manageServices{
+  .item:first-child{margin-left: 0;}
+  .item{
+    h3{font-size: 1.5rem;}
+    .icon{width: 50%;}
+    width: 20%;
+    margin: 3em 2%;
+    display: inline-block;
+
+  }
+}
+
+
+}
+
+/* Desktop menu */
+@media all and (min-width: 960px) {
+
+  .trainer-area{
+    padding: 1.5em 0;
+  }
+
+  .main-content-area {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    
+    form{margin: 0 0 2em;}
+    label, input, button{font-family: base.$font-name-secondary;}
+  }
+
+
+  .blogArea{
+    .content{
+      width: 80%;
+      display: inline-block;
+      vertical-align: top;
+    }
+    .sidebar{
+      padding: 1.5em;
+      h2{font-size: 1.5em; color: gray;}
+      display: inline-block;
+      width: 20%;
+      vertical-align: top;
+    }
+  }
+}
+
+
+/******* HELPERS *******/
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+
+
+.sr-only.focusable:active,
+.sr-only.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+      * Hide visually and from screen readers, but maintain layout
+      */
+
+.invisible {
+  line-height: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  visibility: hidden;
+}
+
+.clearfix::before,
+.clearfix::after {
+  content: " ";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}

@@ -1,0 +1,287 @@
+@use 'base';
+/* Basic styling */
+
+
+footer {
+  background: base.$color-primary;
+  color: base.$color-white;
+  padding: 1em 0;
+  font-size: .8em;
+  p {margin: 0 ;}
+  a {
+    color: base.$color-white;
+  }
+
+
+  .topFooterNav {
+   
+
+    ul {
+      text-align: right;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      text-transform: uppercase;
+
+      li {
+        display: inline;
+        margin-right: 1em;
+      }
+    }
+  }
+}
+
+.logo {
+ 
+  //width: 280px;
+ width: 220px;
+}
+
+
+.topNavBar {
+  font-family: base.$font-name;
+  
+  max-width: 1200px;
+  background: base.$color-white;
+  padding: 0em 1.5em;
+  margin: 0em auto;
+}
+
+.active {
+  transition: width 2s, height 5s, background-color 2s, transform 2s;
+}
+
+nav {
+
+  padding: 0 15px;
+
+}
+
+a {
+  text-transform: uppercase;
+  color: base.$color-primary;
+  text-decoration: none;
+}
+
+.menu,
+.submenu {
+  list-style-type: none;
+}
+
+.item {
+  padding: 10px;
+
+  :not(.button) a:hover,
+  a:hover::after {
+    color: #ccc;
+  }
+}
+
+
+/* Mobile menu */
+.menu {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
+ 
+
+  li a {
+    display: block;
+    padding: 15px 5px;
+  }
+
+  li.subitem a {
+    padding: 15px;
+  }
+}
+
+.toggle {
+  order: 1;
+  font-size: 33px;
+}
+
+.item.button {
+
+  order: 2;
+}
+
+.item {
+  font-size: 1.2em;
+  order: 3;
+  width: 100%;
+  text-align: center;
+  display: none;
+}
+
+.active .item {
+  display: block;
+}
+
+.button.secondary {
+  /* divider between buttons and menu links */
+  border-bottom: 1px #444 solid;
+}
+
+/* Submenu up from mobile screens */
+.submenu {
+  display: none;
+}
+
+.submenu-active .submenu {
+  display: block;
+
+
+}
+
+.has-submenu i {
+  font-size: 12px;
+}
+
+
+.submenu-active {
+  background-color: #111;
+  border-radius: 3px;
+}
+
+/* Tablet menu */
+@media all and (min-width: 700px) {
+  .topNavBar {
+   
+    margin: 1em auto;}
+  .logo {
+ 
+    width: 280px;
+  }
+
+  .disc {
+    width: 49%;
+    float: left;
+  }
+
+  .topFooterNav {
+    width: 50%;
+    float: right;}
+
+  .topNavBar ul li a {
+    position: relative;
+  }
+
+  .topNavBar ul li a:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: '';
+    color: transparent;
+    background: base.$color-tertiary;
+    height: 3px;
+  }
+
+  .topNavBar ul li.logo-item a:after {background: none;}
+
+  .topNavBar ul li a,
+  .topNavBar ul li a:after,
+  .topNavBar ul li a:before {
+    transition: all .5s;
+  }
+
+  .topNavBar ul li a:hover:after {
+    width: 100%;
+  }
+
+
+  .menu {
+    justify-content: center;
+  }
+
+  .logo-item {
+    flex: 1;
+  }
+
+  .toggle {
+    flex: 1;
+    text-align: right;
+    order: 2;
+  }
+
+  /* Button up from tablet screen */
+  .menu li.button a {
+    padding: 10px 15px;
+    margin: 5px 0;
+  }
+
+
+  .button a:hover {
+    text-decoration: none;
+  }
+
+}
+
+/* Desktop menu */
+@media all and (min-width: 960px) {
+
+  .logo {
+ 
+    width: 330px;
+  }
+
+
+  .menu {
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    background: none;
+  }
+
+  .logo-item {
+    order: 0;
+  }
+
+  .item {
+    order: 1;
+    position: relative;
+    display: block;
+    width: auto;
+
+    a:hover {
+      color: base.$color-tertiary
+    }
+
+    .btn {
+      margin: 5px 0 0;
+    }
+  }
+
+  .btn {
+
+    text-transform: uppercase;
+    color: white;
+
+    order: 2;
+
+    :hover {
+      background: #0C1248
+    }
+  }
+
+  .submenu-active .submenu {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 68px;
+    background: #111;
+  }
+
+  .toggle {
+    display: none;
+  }
+
+  .submenu-active {
+    border-radius: 0;
+  }
+}

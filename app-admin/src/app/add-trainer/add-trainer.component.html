@@ -1,0 +1,72 @@
+<div class="main-content-area editArea">
+  <h2 class="text-center">Add Trainer</h2>
+  <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label>Code:</label>
+      <input type="text" formControlName="code" placeholder="Code" class="form-control"
+        [ngClass]="{ 'is-invalid': submitted && f.code.errors }" />
+      <div *ngIf="submitted && f.code.errors">
+        <div *ngIf="f.code.errors.required">Trainer Code is required</div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>image:</label>
+      <input type="text" formControlName="image" placeholder="Image" class="form-control"
+        [ngClass]="{ 'is-invalid': submitted && f.image.errors }" />
+      <div *ngIf="submitted && f.image.errors">
+        <div *ngIf="f.image.errors.required">Image is required</div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>First Name:</label>
+      <input type="text" formControlName="firstname" placeholder="First Name" class="form-control"
+        [ngClass]="{ 'is-invalid': submitted && f.firstname.errors }" />
+      <div *ngIf="submitted && f.firstname.errors">
+        <div *ngIf="f.firstname.errors.required">First Name is required</div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Last Name:</label>
+      <input type="text" formControlName="lastname" placeholder="Last Name" class="form-control"
+        [ngClass]="{ 'is-invalid': submitted && f.lastname.errors }" />
+      <div *ngIf="submitted && f.lastname.errors">
+        <div *ngIf="f.lastname.errors.required">Last Name is required</div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Title:</label>
+      <input type="text" formControlName="title" placeholder="Title" class="form-control"
+        [ngClass]="{ 'is-invalid': submitted && f.title.errors }" />
+      <div *ngIf="submitted && f.title.errors">
+        <div *ngIf="f.title.errors.required">title is required</div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Email:</label>
+      <input type="text" formControlName="email" placeholder="Email" class="form-control"
+        [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+      <div *ngIf="submitted && f.email.errors">
+        <div *ngIf="f.start.email.required">Email is required</div>
+      </div>
+    </div>
+   
+    <div class="form-group">
+      <label>Certification:</label>
+      <input type="text" formControlName="certification" placeholder="Certification" class="form-control"
+        [ngClass]="{ 'is-invalid': submitted && f.certication.errors }" />
+      <div *ngIf="submitted && f.certifiation.errors">
+        <div *ngIf="f.certication.errors.required">PerPerson is required</div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Biography:</label>
+      <input type="text" formControlName="bio" placeholder="bio" class="form-control"
+        [ngClass]="{ 'is-invalid': submitted && f.bio.errors }" />
+      <div *ngIf="submitted && f.bio.errors">
+        <div *ngIf="f.bio.errors.required">Image is required</div>
+      </div>
+    </div>
+    
+    <button type="submit" class="btn btnSave">Save</button>
+  </form>
+</div>

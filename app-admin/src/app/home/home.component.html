@@ -1,0 +1,65 @@
+<div class="main-content-area editArea" *ngIf="isLoggedIn()">
+    <p *ngIf="currentUser">{{ currentUser.name }} , {{ currentUser.email }}</p>
+    <h2>Control Panel</h2>
+    <p>Welcome to the control panel. Here you may manage various components of the application.</p>
+    <div class="manageServices">
+        <div class="item" routerLink="blog">
+            <div class="icon"><img src="assets/images/template/icon/icon-blog.svg" alt="" /></div>
+            <h3>Edit Blog</h3>
+        </div>
+        <div class="item" routerLink="trainers">
+            <div class="icon"><img src="assets/images/template/icon/icon-trainer.svg" alt="" /></div>
+            <h3>Edit Trainers</h3>
+        </div>
+        <div class="item">
+            <div class="icon"><img src="assets/images/template/icon/icon-classes.svg" alt="" /></div>
+            <h3>Edit Classes</h3>
+        </div>
+    </div>
+
+
+
+</div>
+
+
+
+<div *ngIf="!isLoggedIn()">
+    <div class="feature-area">
+        <div class="textarea">
+            <h2>Our Mission</h2>
+            <p>Fusce eget metus hendrerit, cursus urna eget, feugiat purus. Fusce massa turpis, ornare ut consectetur
+                sed, consequat non dolor. Donec pulvinar vulputate nisi, eget porttitor nisl auctor vel. Nunc lacinia
+                tellus id lacus vulputate elementum. Ut vel nisl nibh. Nulla tristique, velit ut ultricies fermentum,
+                ligula neque cursus dui, ac pellentesque sapien orci vitae eros. </p>
+        </div>
+        <div class="overlay"></div>
+
+
+
+    </div>
+
+    <div class="main-content-area">
+        <h2 class="invisible">Services</h2>
+        <div class="s-item">
+            <h3>Trainers</h3>
+            <p class="info">Donec nec lacus ac est pretium cursus at sit amet tortor. Duis orci ex, maximus quis mauris
+                sit amet, elementum pharetra urna. Nunc quis sem eu tortor pharetra varius id eget neque. Integer rutrum
+                molestie sodales.</p>
+            <p class="action"><button (click)="moreTrainer()" class="btn btnLearn">Learn More</button></p>
+        </div>
+        <div class="s-item">
+            <h3>Blog</h3>
+            <p class="info">Nullam lobortis elementum interdum. Proin lacus arcu, varius non nisl eget, elementum
+                elementum enim. Nullam ultricies molestie mattis. Phasellus vitae mauris vel arcu accumsan pulvinar nec
+                id arcu. </p>
+            <p class="action"><button routerLink="blog" class="btn btnLearn">Learn More</button></p>
+        </div>
+        <div class="s-item">
+            <h3>Classes</h3>
+            <p class="info">Sed volutpat id ex vel bibendum. Etiam volutpat sollicitudin mattis. Sed accumsan enim et
+                quam aliquam, in ullamcorper augue feugiat. Suspendisse potenti.</p>
+            <p class="action"><button routerLink="classes" class="btn btnLearn">Learn More</button></p>
+        </div>
+    </div>
+
+</div>

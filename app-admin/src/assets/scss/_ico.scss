@@ -1,0 +1,25 @@
+@use 'base';
+
+.ico{
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    margin: 0 .15em;
+    border: none;
+    padding: .15em;
+    border: 1px solid base.$color-gray;
+}
+
+.ico:hover{
+    background-color: base.$color-ltgray;
+}
+
+
+.icoEdit{
+    background: url('../images/template/icon/icon-edit.png') center center no-repeat;
+    background-size: cover;
+
+
+}
+
+.icoDelete{ background: url('../images/template/icon/icon-delete.svg') center center no-repeat;background-size: cover;}

@@ -1,0 +1,96 @@
+<div class="main-content-area editArea">
+  <h2>Add Blog Post</h2>
+  <form [formGroup]="addBlogForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label>Article Code:</label>
+      <input type="text" formControlName="articlecode" placeholder="articlecode" class="form-control">
+       <!-- [ngClass]="{ 'is-invalid': submitted && f.articlecode.errors }" />
+      <div *ngIf="submitted && f.articlecode.errors">
+        <div *ngIf="f.articlecode.errors.required">Article Code is required</div>
+      </div>-->
+    </div>
+    <div class="form-group">
+      <label>Category:</label>
+      <input type="text" formControlName="category" placeholder="Category" class="form-control">
+        <!--[ngClass]="{ 'is-invalid': submitted && f.category.errors }" />
+      <div *ngIf="submitted && f.category.errors">
+        <div *ngIf="f.category.errors.required">Blog Category is required</div>
+      </div>-->
+    </div>
+    <div class="form-group">
+      <label>Author Image:</label>
+      <input type="text" formControlName="authorimage" placeholder="Author Image" class="form-control">
+       <!-- [ngClass]="{ 'is-invalid': submitted && f.authorimage.errors }" />
+      <div *ngIf="submitted && f.authorimage.errors">
+        <div *ngIf="f.authorimage.errors.required">Image is required</div>
+      </div>-->
+    </div>
+    <div class="form-group">
+      <label>Author First Name:</label>
+      <input type="text" formControlName="authorfirstname" placeholder="Author First Name" class="form-control">
+        <!--[ngClass]="{ 'is-invalid': submitted && f.authorfirstname.errors }" />
+      <div *ngIf="submitted && f.authorfirstname.errors">
+        <div *ngIf="f.authorfirstname.errors.required">Author First Name is required</div>
+      </div>-->
+    </div>
+    <div class="form-group">
+      <label>Author Last Name:</label>
+      <input type="text" formControlName="authorlastname" placeholder="Author Last Name" class="form-control">
+      <!-- [ngClass]="{ 'is-invalid': submitted && f.authorlastname.errors }" />
+      <div *ngIf="submitted && f.authorlastname.errors">
+        <div *ngIf="f.authorlastname.errors.required">Author Last Name is required</div>
+      </div>--> 
+    </div>
+    <div class="form-group">
+      <label>Author Biography:</label>
+      <input type="textarea" formControlName="authorbio" placeholder="Author Biography" class="form-control">
+        <!--[ngClass]="{ 'is-invalid': submitted && f.authorbio.errors }" />
+      <div *ngIf="submitted && f.authorbio.errors">
+        <div *ngIf="f.authorbio.errors.required">Author Biography is required</div>
+      </div> -->
+    </div>
+    <div class="form-group">
+      <label>Title:</label>
+      <input type="text" formControlName="blogtitle" placeholder="Title" class="form-control">
+      <!--  [ngClass]="{ 'is-invalid': submitted && f.blogtitle.errors }" />
+      <div *ngIf="submitted && f.blogtitle.errors">
+        <div *ngIf="f.blogtitle.errors.required">Title is required</div>
+      </div>-->
+    </div>
+    <div class="form-group">
+      <label>Date:</label>
+      <input type="text" formControlName="blogdate" placeholder="Date" class="form-control">
+       <!-- [ngClass]="{ 'is-invalid': submitted && f.blogdate.errors }" />
+      <div *ngIf="submitted && f.blogdate.errors">
+        <div *ngIf="f.start.blogdate.required">Date is required</div>
+      </div>-->
+    </div>
+   
+    <div class="form-group">
+      <label>Blog Image:</label>
+      <input type="text" formControlName="blogimage" placeholder="Blog Image" class="form-control">
+        <!-- [ngClass]="{ 'is-invalid': submitted && f.blogimage.errors }" />
+      <div *ngIf="submitted && f.blogimage.errors">
+        <div *ngIf="f.blogimage.required">Blog image is required</div>
+      </div> -->
+    </div>
+    <div class="form-group">
+      <label>Blog Short Description:</label>
+      <input type="textarea" formControlName="blogshortdesc" placeholder="Blog Short Description" class="form-control">
+       <!-- [ngClass]="{ 'is-invalid': submitted && f.blogshortdesc.errors }" />
+      <div *ngIf="submitted && f.blogshortdesc.errors">
+        <div *ngIf="f.bio.blogshortdesc.required">Blog Short Description is required</div>
+      </div> -->
+    </div>
+    <div class="form-group">
+      <label>Blog Post:</label>
+      <input type="textarea" formControlName="bloglongdesc" placeholder="Blog Post" class="form-control">
+       <!--[ngClass]="{ 'is-invalid': submitted && f.bloglongdesc.errors }" />
+      <div *ngIf="submitted && f.bloglongdesc.errors">
+        <div *ngIf="f.bio.bloglongdesc.required">Blog post required</div>
+      </div> -->
+    </div>
+    
+    <button type="submit" class="btn btnSave">Save</button>
+  </form>
+</div>

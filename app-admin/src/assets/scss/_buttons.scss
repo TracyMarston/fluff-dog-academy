@@ -1,0 +1,75 @@
+@use 'base';
+.btn {
+  border: none;
+  display: inline-block;
+  padding: .5em .5em .45em;
+  font-size: 1em;
+  text-decoration: none;
+  text-align: center;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+a:hover,
+.active {
+  -webkit-transition: background-color 0.5s ease;
+  -moz-transition: background-color 0.5s ease;
+  -o-transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease;
+}
+
+.btnTopic{
+  line-height: 1em;
+  border: 1px solid base.$color-dkgray;
+  color:  base.$color-dkgray !important;
+  background: base.$color-white;
+  &:hover{background: base.$color-ltgray;}
+}
+
+ .btnArticle{
+  line-height: 1em;
+  border: 1px solid base.$color-primary;
+  color:  base.$color-primary !important;
+  background: base.$color-white;
+  &:hover{
+    color: base.$color-white !important;
+    background: base.$color-primary;}
+}
+
+.btnLearn, .btnLogin, .btnAdd, .btnSave{background-color: #0C1248; color: base.$color-white;}
+
+.textArrow{text-transform: none;}
+.textArrow:after{
+  content:'';
+  background: url('../images/template/icon/icon-chev-right.svg') no-repeat;
+  background-size: contain;
+  color: base.$color-primary;
+  display: inline-block;
+  width: 25px;
+  height: 1em;
+  position:relative;
+  top: .2em;
+  margin-left: .05em;
+}
+//.btnLogin{ background: #B2B2B2;color:white;}
+
+.btnLearn:hover,  .btnAdd:hover, .btnSave:hover {
+  background-color: #D03737;
+  color: #fff;
+  cursor: pointer;
+  -webkit-transition: background-color 0.5s ease;
+  -moz-transition: background-color 0.5s ease;
+  -o-transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease;
+}
+
+.btnLogin:hover {
+  background-color: #ccc;
+  color: #fff;
+  cursor: pointer;
+  -webkit-transition: background-color 0.5s ease;
+  -moz-transition: background-color 0.5s ease;
+  -o-transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease;
+}

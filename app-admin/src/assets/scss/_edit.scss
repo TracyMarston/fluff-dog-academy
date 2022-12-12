@@ -1,0 +1,19 @@
+@use 'base';
+
+.editArea{
+
+    
+
+
+    .editIntro{
+        position: relative;
+        .btn{position: absolute; bottom: 0 ; right: 0;}
+    }
+    
+    ul{margin: 0 0 1.5em; padding: 0; list-style-type:  none; }
+    li{padding: .5em .5em .5em 2em; border-bottom: 1px solid #ccc; position: relative;}
+  
+    .action-before{position: absolute; top: 50%; margin-top: -12px; left: 0;}
+    .action-after{position: absolute; top: 50%; margin-top: -12px; right: 0;}
+
+}

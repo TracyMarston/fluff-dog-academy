@@ -1,0 +1,82 @@
+
+@use 'base';
+
+
+  .blogPosts {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .blogPostItem {
+    &:hover{
+        cursor: pointer;
+    }
+    display: flex;
+    padding: 1rem;
+    @media(min-width: 40rem) {
+      width: 50%;
+    }
+    @media(min-width: 56rem) {
+      width: 33.3333%;
+    }
+  
+  
+  .item {
+    padding: 0;
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 20px 40px -14px rgba(0,0,0,0.25);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    &:hover {
+      .itemImage {
+        filter: contrast(100%);
+      }
+    }
+  }
+}
+  
+  .itemContent {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    padding: 1rem;
+  }
+  
+  .itemImage {
+  
+    filter: contrast(70%);
+    //filter: saturate(180%);
+    overflow: hidden;
+    position: relative;
+    transition: filter 0.5s cubic-bezier(.43,.41,.22,.91);;
+    &::before {
+      content: "";
+        display: block;
+      //padding-top: 56.25%; // 16:9 aspect ratio
+    }
+   
+  }
+  
+
+  
+  .itemTitle {
+    color: base.$color-primary;;
+    font-size: 1.5rem;
+   // font-weight: 300;
+   // letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  
+  .itemText {
+    flex: 1 1 auto;
+    font-size: 1rem;
+ 
+    margin-bottom: 1.25rem;
+  }
+  
+  

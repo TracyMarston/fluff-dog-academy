@@ -1,0 +1,30 @@
+$color-background: #fefefe !default;
+$color-text: #333 !default;
+$color-text-button: #333 !default;
+$color-mark: #f3f315 !default;
+ 
+$color-border: #aaa !default;
+$color-table-row: lighten($color-text, 75%) !default;
+ 
+$color-primary: #0C1248 !default; // Dark Blue
+$color-secondary: #B2B2B2 !default; // Gray
+$color-tertiary: #D03737 !default; // Orange Red
+
+$color-white: #FFF;
+$color-ltgray: #F7F7F7;
+$color-gray: #B2B2B2;
+$color-dkgray: #808080;
+$color-black: #333;
+ 
+$color-toggle-on: #86deb7 !default;
+$color-toggle-off: #da6869 !default;
+ 
+$color-disabled: #aaa !default;
+$font-url: 'https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@800&family=Inter:wght@200&family=Roboto+Condensed&display=swap' !default;
+
+$font-name: 'Barlow Condensed' !default;
+$font-name-secondary: 'Roboto Condensed' !default;
+
+
+// EDITING STYLES BASES
+$font-edit-name: 'Inter' !default;

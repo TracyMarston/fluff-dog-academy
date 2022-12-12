@@ -1,0 +1,32 @@
+<div *ngIf="!isLoggedIn()" class="main-content-area">
+ 
+  
+
+  <div class="blogArea">
+    <div class="content">
+      <div class="blogItemDetail" *ngIf="selectedBlogPost">
+        
+        <h2>{{ selectedBlogPost.blogtitle }}</h2>
+        <div class="authorArea">
+          <div class="photo"><img src="assets/images/blog/author/{{ selectedBlogPost.authorimage }}" /></div><div class="author"><p>{{  selectedBlogPost.authorfirstname }} {{  selectedBlogPost.authorlastname }}</p></div><div class="date"> <p>Posted: {{ selectedBlogPost.blogdate }}</p></div>
+        </div>
+        
+        <p><img src="assets/images/blog/article/{{ selectedBlogPost.blogimage}}" alt="" /></p>
+        
+
+        <div class="mainBlogContent" [innerHTML]="convertHTML"></div>
+        <hr />
+        <div class="category"><p>TOPICS: <button class="btn btnTopic">{{ selectedBlogPost.category }}</button> </p></div> 
+
+      </div>
+
+    </div>
+    <div class="sidebar">
+      
+
+    </div>
+
+
+
+  </div>
+</div>

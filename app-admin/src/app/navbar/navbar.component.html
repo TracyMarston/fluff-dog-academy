@@ -1,0 +1,27 @@
+
+    
+    <!--  <ul>
+        <li><a href="#!">Blog</a></li>
+        <li ><a href="#!">Classes</a></li>
+        <li><a >Trainers</a></li>
+        <li></li>
+      </ul>-->
+ 
+      <nav class="topNavBar">
+        <ul class="menu">
+          <li class="logo-item"><a class="logo" routerLink=""><img src="/assets/images/template/logo.svg" ></a></li>
+         
+          <li class="item"><a routerLink="blog">Blog</a></li>
+          <li class="item"><a routerLink="trainers">Trainers</a></li>
+          <li class="item"><a routerLink="classes">Classes</a>
+          </li>
+          <li class="item button"><button class="btn btnLogin" routerLink="login" *ngIf="!isLoggedIn()">Login</button><button class="btn btnLogin" (click)="onLogout()" *ngIf="isLoggedIn()">Logout</button></li>
+          
+          <li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
+        </ul>
+      </nav>
+
+
+
+
+

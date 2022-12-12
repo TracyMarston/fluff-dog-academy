@@ -1,0 +1,43 @@
+
+<div class="main-content-area editArea"  *ngIf="isLoggedIn()">
+<h2>Manage Trainers</h2>
+
+<div class="editIntro">
+  <p class="clearfix">On this page you may <strong>ADD</strong>, <strong>EDIT</strong> or <strong>DELETE</strong> Trainers. </p>
+  <button *ngIf="isLoggedIn()" (click)="addTrainer()" class="btn btnAdd">Add</button>
+
+</div>
+<ul>
+  
+  <li *ngFor="let trainer of trainers"><div class="action-before"><button (click)="editTrainer(trainer)" class="ico icoEdit"><span class="invisible">EDIT</span></button></div>{{ trainer.firstname }} {{ trainer.lastname }}
+    <div class="action-after"><button (click)="deleteTrainer(trainer)" class="ico icoDelete"><span class="invisible">DELETE</span></button></div></li>
+</ul>
+
+</div>
+
+ 
+
+
+
+<div class="main-content-area" *ngIf="!isLoggedIn()" >
+  <div class="pageIntro clearfix">
+  <div class="overlay"></div>
+  <div class="photo"><img src="assets/images/header/header-trainer.jpg" alt="" /></div>
+  <div class="content">
+    <h2>Meet our Trainers</h2>
+   <p>Pellentesque sagittis, eros et dictum convallis, lacus orci tincidunt nibh, in ultricies lacus sem ac diam. Suspendisse vitae purus in orci accumsan suscipit ac quis lectus. Nam vestibulum ligula at velit commodo posuere. Etiam massa tellus, eleifend quis augue non, semper ultricies nibh. Vivamus ante justo, dictum ac viverra eu, pharetra sed elit. Curabitur ut aliquet mauris, et aliquam sapien. Morbi pellentesque diam nec dui interdum, vel sodales ante vestibulum.</p>
+  </div>
+  
+</div>
+  <div class="trainer-area clearfix" *ngFor="let trainer of trainers">
+    <div class="photo"><img src="assets/images/trainer/{{ trainer.image }}" alt="Photo of {{trainer.firstname}}"></div>
+    <div class="content">
+        <h3>{{ trainer.firstname }} {{ trainer.lastname }}</h3>
+        <h4>{{ trainer.title }}</h4>
+        <p><a class="textArrow" href="mailto:{{ trainer.email }}">Contact Me</a></p>
+        <p class="certification">{{trainer.certification}}</p>
+        <p>{{ trainer.bio }}</p>
+      </div>
+  
+  </div>
+</div>

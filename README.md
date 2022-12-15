@@ -9,7 +9,7 @@ MongoDB, Express, Angular, Node, Typescript, Mongoose, JWT, Crypto, HTML, and SA
 **Tools:** Visual Code Studio, Git, and POSTMAN
 ## Index
 
-   * [About](#About)
+  
    * [Trainer](#Trainer)
    * [Blog](#Blog)
    * [Classes](#Classes)

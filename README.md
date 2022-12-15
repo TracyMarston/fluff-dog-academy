@@ -1,7 +1,7 @@
 
 # Portfolio: Fluff Dog Academy
 
-Create a Single Page Application for a Dog Training Company Client.
+Create a Single Page Application for a Dog Training Company.
  
 **Languages and Technology:** 
 MongoDB, Express, Angular, Node, Typescript, Mongoose, JWT, Crypto, HTML, and SASS 
